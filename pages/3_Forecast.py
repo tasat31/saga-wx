@@ -16,13 +16,13 @@ import streamlit.components.v1 as components
 
 components.iframe(
     src='https://www3.nhk.or.jp/news/weather/weather_movie.html',
-    width=800,
+    width=720,
     height=500
 )
 
 components.iframe(
     src='https://www.jma.go.jp/bosai/map.html#5/29.478/131.309/&contents=forecast',
-    width=800,
+    width=720,
     height=500
 )
 
