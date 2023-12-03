@@ -1,0 +1,22 @@
+version: "3.8"
+
+volumes:
+  aipit-sqlite3-db:
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: aipit
+    container_name: aipit
+    tty: true
+    ports:
+      - "8501:8501"
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - aipit-sqlite3-db:/var/lib/sqlite3
+    environment:
+      - DISPLAY=$DISPLAY
+    network_mode: "host"

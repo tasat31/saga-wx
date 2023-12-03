@@ -1,0 +1,59 @@
+# -*- mode: python ; coding: utf-8 -*-
+# C:\Users\takahiro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts\pyinstaller.exe app.spec --clean
+
+a = Analysis(
+    ['app.py'],
+    pathex=[],
+    binaries=[],
+    datas=[
+        (
+            "./venv/Lib/site-packages/altair/vegalite/v5/schema/vega-lite-schema.json",
+            "./altair/vegalite/v5/schema/"
+        ),
+        (
+            "./venv/Lib/site-packages/streamlit",
+            "./streamlit"
+        ),
+        (
+            "./venv/Lib/site-packages/",
+            "."
+        ),
+        (
+            "./app",
+            "./app"
+        )
+    ],
+    hiddenimports=[
+        "streamlit"
+    ],
+    hookspath=['./hooks'],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[],
+    win_no_prefer_redirects=False,
+    win_private_assemblies=False,
+    # cipher=block_cipher,
+    noarchive=False,
+)
+pyz = PYZ(a.pure)
+
+exe = EXE(pyz,
+          a.scripts,
+          [],
+          exclude_binaries=True,
+          name='EquasisScraper',
+          debug=False,
+          bootloader_ignore_signals=False,
+          strip=False,
+          upx=True,
+          console=False,
+          # icon='Punch_Logo.ico'
+         )
+coll = COLLECT(exe,
+               a.binaries,
+               a.zipfiles,
+               a.datas,
+               strip=False,
+               upx=True,
+               upx_exclude=[],
+               name='EquasisScraper')
