@@ -1,4 +1,4 @@
-import base64
+import os, base64, uuid
 import urllib.request
 import urllib.error
 from PyPDF2 import PdfWriter
@@ -89,15 +89,22 @@ class JmaWeatherData:
             except urllib.error.HTTPError:
                 pass
 
-        output = open('/tmp/output.pdf', "wb")
+        output_file_path = "/tmp/%s.pdf" % uuid.uuid4().hex[:8]
+        output = open(output_file_path, "wb")
         merger.write(output)
         merger.close()
         output.close()
 
-        with open("/tmp/output.pdf", "rb") as file:
+        with open(output_file_path, "rb") as file:
             self.st.download_button(
                 label="気象データをまとめてダウンロード",
                 data=file,
                 file_name="jma_chart.pdf",
                 mime="application/pdf"
             )
+
+        for file in download_tmp_files:
+            try:
+                os.remove(file)
+            except Exception as e:
+                pass
