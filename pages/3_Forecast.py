@@ -1,5 +1,8 @@
 import streamlit as st
 import streamlit.components.v1 as components
+from app.components.jma_weekly_latest import JmaWeeklyLatest
+
+jma_weekly_latest = JmaWeeklyLatest(st)
 
 """
 ### 日本全国 天気予報
@@ -26,7 +29,8 @@ components.iframe(
     height=500
 )
 
-
+jma_weekly_latest.render()
+ｆ
 # style
 st.markdown("""
     <style>

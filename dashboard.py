@@ -51,6 +51,16 @@ components.iframe(
     height=500
 )
 
+"""
+#### [雲頂強調画像](https://www.jma.go.jp/bosai/map.html#5/31.672/129.902/&elem=strengthen&contents=himawari)
+"""
+
+components.iframe(
+    src='https://www.jma.go.jp/bosai/map.html#5/31.672/129.902/&elem=strengthen&contents=himawari',
+    width=720,
+    height=500
+)
+
 # style（
 st.markdown("""
     <style>
