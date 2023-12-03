@@ -30,7 +30,7 @@ components.iframe(
 )
 
 jma_weekly_latest.render()
-ｆ
+
 # style
 st.markdown("""
     <style>
