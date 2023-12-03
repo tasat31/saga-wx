@@ -15,7 +15,7 @@ import streamlit.components.v1 as components
 
 components.iframe(
     src='https://www.jma.go.jp/bosai/nowc/#lat:32.500496/lon:131.176758/zoom:7/colordepth:normal/elements:hrpns&slmcs&slmcs_fcst',
-    width=800,
+    width=720,
     height=500,
     scrolling=True
 )
@@ -27,7 +27,7 @@ components.iframe(
 
 components.iframe(
     src='https://www.jma.go.jp/bosai/map.html#6/30.949/129.276/&contents=windprofiler',
-    width=800,
+    width=720,
     height=500
 )
 
@@ -37,7 +37,7 @@ components.iframe(
 
 components.iframe(
     src='https://www.jma.go.jp/bosai/map.html#5/34.507/132.166/&elem=ir&contents=himawari',
-    width=800,
+    width=720,
     height=500
 )
 
@@ -47,7 +47,7 @@ components.iframe(
 
 components.iframe(
     src='https://www.jma.go.jp/bosai/map.html#5/34.507/132.166/&elem=vis&contents=himawari',
-    width=800,
+    width=720,
     height=500
 )
 
