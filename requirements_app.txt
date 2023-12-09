@@ -1,0 +1,20 @@
+pydantic
+python-dotenv
+
+# Streamlit
+altair
+pandas
+streamlit
+
+# Database
+SQLAlchemy
+alembic
+
+# Scraping
+playwright
+
+# distribute
+pyinstaller
+
+# misc
+PyPDF2

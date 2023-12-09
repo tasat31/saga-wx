@@ -9,13 +9,20 @@ RUN apt-get update && apt-get install -y \
     curl \
     software-properties-common \
     git \
+    wget \
+    r-base-core \
     && rm -rf /var/lib/apt/lists/*
 
 # Setup python
-COPY ./requirements.txt .
+COPY ./requirements_app.txt .
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r requirements_app.txt
 
 # Setup playwright
 RUN playwright install
 RUN playwright install-deps
+
+# Setup R environment
+RUN R --slave -e 'install.packages("renv")'
+RUN R --slave -e 'renv::init(force = TRUE)'
+RUN R --slave -e 'renv::restore(rebuild = TRUE, clean = TRUE)'
