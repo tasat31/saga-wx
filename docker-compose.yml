@@ -19,4 +19,4 @@ services:
       - aipit-sqlite3-db:/var/lib/sqlite3
     environment:
       - DISPLAY=$DISPLAY
-    network_mode: "host"
+    network_mode: "bridge"
