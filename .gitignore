@@ -35,5 +35,7 @@ build/
 dist/
 
 venv/
+renv/
+.Rprofile
 
 app.spec

@@ -1,20 +1,2 @@
-pydantic
-python-dotenv
-
-# Streamlit
-altair
-pandas
-streamlit
-
-# Database
-SQLAlchemy
-alembic
-
-# Scraping
-playwright
-
-# distribute
-pyinstaller
-
-# misc
-PyPDF2
+setuptools==69.0.2
+wheel==0.42.0
