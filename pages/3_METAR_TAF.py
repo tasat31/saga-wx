@@ -7,7 +7,7 @@ station_ids = MY_STATIONS.split(',')
 wx = get_wx(station_ids)
 
 """
-### 空港 気象
+### METAR, TAF, 飛行場時系列データ
 
 """
 for station_id in station_ids:

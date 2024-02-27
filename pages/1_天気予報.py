@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
-from app.components.jma_weekly_latest import JmaWeeklyLatest
+from app.widgets.jma_weekly_latest import JmaWeeklyLatest
 
 jma_weekly_latest = JmaWeeklyLatest(st)
 

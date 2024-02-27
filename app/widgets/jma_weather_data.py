@@ -26,7 +26,23 @@ _urls = [
         'description':
             """
             ##### [AUPQ35] アジア500hPa・300hPa高度・気温・風・等風速線天気図
-            500hPa,300hPa高層の実況図で、トラフや寒冷渦等の把握を行います。
+            500hPa,300hPa高層の実況図で、トラフや寒冷渦等の確認を行います。
+            """
+    },
+    {
+        'url': 'https://www.jma.go.jp/bosai/numericmap/data/nwpmap/aupq78_00.pdf',
+        'description':
+            """
+            ##### [AUPQ78] アジア850hPa・700hPa高度・気温・風・湿数天気図
+            850hPa,700hPa高層の実況図で、湿域等の確認を行います。
+            """
+    },
+    {
+        'url': 'https://www.jma.go.jp/bosai/numericmap/data/nwpmap/axfe578_00.pdf',
+        'description':
+            """
+            ##### [AXFE578] 極東850hPa気温・風、700hPa上昇流／500hPa高度・渦度天気図
+            850hPa,700hPa高層の数値解析図で、渦度、上昇流等の確認を行います。
             """
     },
     {
@@ -34,15 +50,15 @@ _urls = [
         'description':
             """
             ##### [FUPA502] アジア太平洋500hPa 高度・気温・風 24時間予想図
-            500hPa高層の予想図で、トラフや寒冷渦等の発現を把握し、擾乱の予想等を行います。
+            500hPa高層の数値予報図で、トラフや寒冷渦等の発現を確認し、擾乱の予想等を行います。
             """
     },
     {
-        'url': 'https://www.jma.go.jp/bosai/numericmap/data/nwpmap/feas502_12.pdf',
+        'url': 'https://www.jma.go.jp/bosai/numericmap/data/nwpmap/fxfe502_00.pdf',
         'description':
             """
-            ##### [FEAS502] アジア地上気圧、850hPa気温／500hPa高度・渦度 24時間予想図
-            500hPaの渦度の予想にもとづいて、前線やシアラインの発現を予想します。
+            ##### [FXFE502] 極東地上気圧・風・降水量／500hPa高度・渦度予想図
+            500hPa高層の数値予報図で、渦度、降水量の予想等を行います。
             """
     },
     {
@@ -50,7 +66,7 @@ _urls = [
         'description':
             """
             ##### [FXFE5782] 極東850hPa気温・風、700hPa上昇流／700hPa湿数、500hPa気温予想図 24時間予想図
-            700hPaの上昇流の予想を行います。上昇流の発生と湿数の予想から降水や雲の発生を予想します。
+            700hPaの上昇流の予想を行います。上昇流の発生と湿数から降水や雲の発生を予想します。
             """
     },
     {
@@ -60,7 +76,16 @@ _urls = [
             ##### [FXJP854] 日本850hPa相当温位・風予想図
             前線や高気圧の縁辺を沿って吹き込む風の向きや温位を予想します。
             """
-    }
+    },
+    {
+        'url': 'https://www.jma.go.jp/bosai/numericmap/data/nwpmap/feas502_12.pdf',
+        'description':
+            """
+            ##### [FEAS502] アジア地上気圧、850hPa気温／500hPa高度・渦度 24時間予想図
+            500hPaの渦度の数値予報にもとづいて、前線やシアラインの発現を予想します。
+            """
+    },
+
 ]
 
 class JmaWeatherData:
@@ -108,3 +133,9 @@ class JmaWeatherData:
                 os.remove(file)
             except Exception as e:
                 pass
+
+        """
+        出典:
+            高層天気図: https://www.jma.go.jp/bosai/numericmap/#type=upper
+            数値予報天気図: https://www.jma.go.jp/bosai/numericmap/
+        """
