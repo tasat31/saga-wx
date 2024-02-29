@@ -12,8 +12,10 @@ import datetime
 
 st.session_state.airinfo_pictures = []
 
-for hours in range(10, 1, -1):
-    past_datetime = datetime.datetime.now() - datetime.timedelta(hours=hours)
+current_datetime_utc = datetime.datetime.now(datetime.timezone.utc)
+
+for hours in range(9, 0, -1):
+    past_datetime = current_datetime_utc - datetime.timedelta(hours=hours)
     picture_url = 'https://www.data.jma.go.jp/airinfo/data/pict/maiji/WANLC156_RJTD_%s0000.PNG' % past_datetime.strftime("%Y%m%d%H")
     st.session_state.airinfo_pictures.append(picture_url)
 
