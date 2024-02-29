@@ -19,4 +19,5 @@ services:
       - aipit-sqlite3-db:/var/lib/sqlite3
     environment:
       - DISPLAY=$DISPLAY
+      - TZ=Asia/Tokyo
     network_mode: "bridge"
