@@ -1,5 +1,6 @@
 import time
 import streamlit as st
+import datetime
 
 """
 ### 毎時大気解析
@@ -9,22 +10,18 @@ import streamlit as st
 
 """
 
-img_arrays = [
-    "https://www.data.jma.go.jp/airinfo/data/pict/maiji/WANLC156_RJTD_20240227090000.PNG",
-    "https://www.data.jma.go.jp/airinfo/data/pict/maiji/WANLC156_RJTD_20240227100000.PNG",
-    "https://www.data.jma.go.jp/airinfo/data/pict/maiji/WANLC156_RJTD_20240227110000.PNG",
-    "https://www.data.jma.go.jp/airinfo/data/pict/maiji/WANLC156_RJTD_20240227120000.PNG",
-    "https://www.data.jma.go.jp/airinfo/data/pict/maiji/WANLC156_RJTD_20240227130000.PNG",
-    "https://www.data.jma.go.jp/airinfo/data/pict/maiji/WANLC156_RJTD_20240227140000.PNG",
-    "https://www.data.jma.go.jp/airinfo/data/pict/maiji/WANLC156_RJTD_20240227150000.PNG",
-]
+st.session_state.airinfo_pictures = []
+
+for hours in range(10, 1, -1):
+    past_datetime = datetime.datetime.now() - datetime.timedelta(hours=hours)
+    picture_url = 'https://www.data.jma.go.jp/airinfo/data/pict/maiji/WANLC156_RJTD_%s0000.PNG' % past_datetime.strftime("%Y%m%d%H")
+    st.session_state.airinfo_pictures.append(picture_url)
 
 placeholder = st.empty()
 
-for img_array in img_arrays:
-  placeholder.image(img_array, width=1000)
+for pict in st.session_state.airinfo_pictures:
+  placeholder.image(pict, width=1000)
   time.sleep(3)
-
 
 # style
 st.markdown("""
