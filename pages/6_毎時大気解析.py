@@ -2,6 +2,10 @@ import time
 import streamlit as st
 import datetime
 
+st.set_page_config(
+        page_title="毎時大気解析",
+)
+
 """
 ### 毎時大気解析
 

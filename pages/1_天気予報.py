@@ -4,6 +4,10 @@ from app.widgets.jma_weekly_latest import JmaWeeklyLatest
 
 jma_weekly_latest = JmaWeeklyLatest(st)
 
+st.set_page_config(
+        page_title="日本全国 天気予報",
+)
+
 """
 ### 日本全国 天気予報
 """

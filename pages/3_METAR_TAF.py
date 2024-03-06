@@ -6,6 +6,10 @@ from services.aviationweather import get_wx
 station_ids = MY_STATIONS.split(',')
 wx = get_wx(station_ids)
 
+st.set_page_config(
+        page_title="METAR, TAF, 飛行場時系列データ",
+)
+
 """
 ### METAR, TAF, 飛行場時系列データ
 

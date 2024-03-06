@@ -5,6 +5,10 @@ import streamlit.components.v1 as components
 # レーダーエコー: https://www.jma.go.jp/bosai/nowc/#lat:32.805745/lon:128.463135/zoom:7/colordepth:normal/elements:hrpns&slmcs&slmcs_fcst
 # 最新気象情報の降水、風、気温 3日分位を画像貼り付け https://www.data.jma.go.jp/stats/data/mdrr/index.html
 
+st.set_page_config(
+        page_title="気象ダッシュボード",
+)
+
 """
 ### 気象ダッシュボード
 """

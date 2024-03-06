@@ -1,6 +1,11 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
+
+st.set_page_config(
+        page_title="下層悪天予想図(西日本)",
+)
+
 """
 ### 下層悪天予想図(西日本)
 

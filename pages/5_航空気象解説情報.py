@@ -1,5 +1,9 @@
 import streamlit as st
 
+st.set_page_config(
+        page_title="航空気象解説情報",
+)
+
 """
 ### 航空気象解説情報
 

@@ -3,6 +3,10 @@ from app.widgets.jma_weather_data import JmaWeatherData
 
 jma_weather_data = JmaWeatherData(st)
 
+st.set_page_config(
+        page_title="気象庁 天気図",
+)
+
 """
 ### 気象庁 天気図
 
