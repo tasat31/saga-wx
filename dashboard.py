@@ -22,16 +22,6 @@ components.iframe(
 
 
 """
-#### [ウィンドプロファイラ](https://www.jma.go.jp/bosai/map.html#6/30.949/129.276/&contents=windprofiler)
-"""
-
-components.iframe(
-    src='https://www.jma.go.jp/bosai/map.html#6/30.949/129.276/&contents=windprofiler',
-    width=720,
-    height=500
-)
-
-"""
 #### [赤外画像](https://www.jma.go.jp/bosai/map.html#5/34.507/132.166/&elem=ir&contents=himawari)
 """
 
@@ -61,6 +51,27 @@ components.iframe(
     height=500
 )
 
+
+"""
+#### [ウィンドプロファイラ](https://www.jma.go.jp/bosai/map.html#6/30.949/129.276/&contents=windprofiler)
+"""
+
+components.iframe(
+    src='https://www.jma.go.jp/bosai/map.html#6/30.949/129.276/&contents=windprofiler',
+    width=720,
+    height=500
+)
+
+"""
+#### [Windy](https://www.windy.com/?32.569,130.627,8)
+"""
+
+components.iframe(
+    src='https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=default&metricTemp=default&metricWind=default&zoom=7&overlay=wind&product=ecmwf&level=surface&lat=32.695&lon=130.814',
+    width=720,
+    height=500
+)
+
 # style（
 st.markdown("""
     <style>
@@ -69,3 +80,5 @@ st.markdown("""
         #stDecoration {display:none;}
     </style>
 """, unsafe_allow_html=True)
+
+
