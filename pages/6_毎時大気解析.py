@@ -10,19 +10,29 @@ import datetime
 
 """
 
-st.session_state.airinfo_pictures = []
+st.session_state.airinfo_time_series_pictures = []
+st.session_state.airinfo_flight_level_pictures = []
 
 current_datetime_utc = datetime.datetime.now(datetime.timezone.utc)
 
 for hours in range(9, 0, -1):
     past_datetime = current_datetime_utc - datetime.timedelta(hours=hours)
     picture_url = 'https://www.data.jma.go.jp/airinfo/data/pict/maiji/WANLC156_RJTD_%s0000.PNG' % past_datetime.strftime("%Y%m%d%H")
-    st.session_state.airinfo_pictures.append(picture_url)
+    st.session_state.airinfo_time_series_pictures.append(picture_url)
 
-placeholder = st.empty()
+latest_datetime = past_datetime
 
-for pict in st.session_state.airinfo_pictures:
-  placeholder.image(pict, width=1000)
+for flight_level in ['21', '19', '17', '15', '13', '11', '09', '07', '05']:
+    st.session_state.airinfo_flight_level_pictures.append(
+        'https://www.data.jma.go.jp/airinfo/data/pict/maiji/WANLF1%s_RJTD_%s0000.PNG' % (flight_level, latest_datetime.strftime("%Y%m%d%H"))
+    )
+
+time_series_placeholder = st.empty()
+flight_level_placeholder = st.empty()
+
+for i in range(9):
+  time_series_placeholder.image(st.session_state.airinfo_time_series_pictures[i], width=1000)
+  flight_level_placeholder.image(st.session_state.airinfo_flight_level_pictures[i], width=1000)
   time.sleep(3)
 
 # style
