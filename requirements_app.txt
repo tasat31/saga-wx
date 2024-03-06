@@ -1,5 +1,6 @@
 pydantic
 python-dotenv
+pytz
 
 # Streamlit
 altair
