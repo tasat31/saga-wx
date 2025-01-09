@@ -17,6 +17,7 @@ _urls = [
         'url': 'https://www.data.jma.go.jp/fcd/yoho/data/wxchart/quick/FSAS24_MONO_ASIA.pdf',
         'description':
             """
+           詳細の説明は[こちら](https://www.jma.go.jp/jma/kishou/know/kurashi/FSAS_kaisetu.html)
             """
     },
     {

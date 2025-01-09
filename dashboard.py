@@ -97,6 +97,16 @@ components.iframe(
     height=500
 )
 
+"""
+#### [SPAS速報天気図](https://www.jma.go.jp/bosai/weather_map/)
+"""
+
+components.iframe(
+    src='https://www.jma.go.jp/bosai/weather_map/',
+    width=720,
+    height=850,
+    scrolling=True
+)
 
 # style（
 st.markdown("""

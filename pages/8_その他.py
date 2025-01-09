@@ -9,7 +9,13 @@ st.set_page_config(
 """
 ### その他
 
-[ご利用にあたっての注意点]
+##### 気象庁資料
+
+[気象庁情報カタログ](https://www.data.jma.go.jp/suishin/catalogue/catalogue.html)
+
+[配信資料に関する技術情報](https://www.data.jma.go.jp/add/suishin/cgi-bin/jyouhou/jyouhou.cgi)
+
+##### ご利用にあたっての注意点
 
 - 気象情報の出典は気象庁等からとなります。
 - 現在は制作中のサイトのテスト公開となります。
@@ -18,9 +24,9 @@ st.set_page_config(
 
 [その他お問い合わせ]
 
-こちらのメールアドレスにお願いします。(`_atmark_` -> `@` に変えて下さい))
+こちらのメールアドレスにお願いします。
 
-info_atmark_heart-musen.com
+info@heart-musen.com
 
 """
 
