@@ -6,6 +6,8 @@ pytz
 altair
 pandas
 streamlit
+streamlit-carousel
+streamlit[pdf]
 
 # Database
 SQLAlchemy
@@ -13,9 +15,6 @@ alembic
 
 # Scraping
 playwright
-
-# distribute
-pyinstaller
 
 # misc
 PyPDF2
