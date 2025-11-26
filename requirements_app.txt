@@ -2,12 +2,15 @@ pydantic
 python-dotenv
 pytz
 
+folium
+
 # Streamlit
 altair
 pandas
 streamlit
 streamlit-carousel
 streamlit[pdf]
+streamlit_folium
 
 # Database
 SQLAlchemy
@@ -18,3 +21,4 @@ playwright
 
 # misc
 PyPDF2
+schedule

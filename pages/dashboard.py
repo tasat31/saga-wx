@@ -181,7 +181,7 @@ if st.button("Refresh", key="refresh_top"):
 
 st.write("[[ASAS] アジア太平洋域 実況天気図](https://www.data.jma.go.jp/fcd/yoho/data/wxchart/quick/ASAS_COLOR.pdf)")
 
-st.pdf('https://www.data.jma.go.jp/fcd/yoho/data/wxchart/quick/ASAS_COLOR.pdf')
+st.pdf('https://www.data.jma.go.jp/fcd/yoho/data/wxchart/quick/ASAS_COLOR.pdf', key="asas")
 
 with st.expander("実況天気の推移"):
     st.caption("[過去の実況天気図](https://www.data.jma.go.jp/yoho/wxchart/quickmonthly.html)、[SPAS速報天気図](https://www.jma.go.jp/bosai/weather_map/)")
@@ -195,7 +195,7 @@ with st.expander("最新の気象データ"):
 
 st.write("[[FSAS24] アジア地上 24時間天気図](https://www.data.jma.go.jp/yoho/data/wxchart/quick/FSAS24_COLOR_ASIA.pdf)")
 
-st.pdf('https://www.data.jma.go.jp/yoho/data/wxchart/quick/FSAS24_COLOR_ASIA.pdf')
+st.pdf('https://www.data.jma.go.jp/yoho/data/wxchart/quick/FSAS24_COLOR_ASIA.pdf', key="fsas")
 
 """
 ##### [レーダーエコー](https://www.jma.go.jp/bosai/nowc/#lat:32.500496/lon:131.176758/zoom:7/colordepth:normal/elements:hrpns&slmcs&slmcs_fcst)
@@ -218,6 +218,11 @@ with himawari_col2:
     """
 
     st.image(f"https://www.data.jma.go.jp/mscweb/data/himawari/img/jpn/jpn_tre_{hour_and_minute}.jpg")
+
+
+"""
+##### [高解像度雲画像](https://weather-models.info/latest/himawari-japan-vis.html)
+"""
 
 """
 ##### [雲頂強調画像](https://www.jma.go.jp/bosai/map.html#5/31.672/129.902/&elem=strengthen&contents=himawari)

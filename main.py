@@ -6,7 +6,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-st.sidebar.title("My Local Weather Insight")
+st.sidebar.title("My Weather Station")
 st.sidebar.caption("Heart Musen LLC 2025")
 
 pg = st.navigation({
@@ -22,7 +22,7 @@ pg = st.navigation({
         st.Page("pages/6_毎時大気解析.py", title="毎時大気解析", icon=":material/add_circle:"),
     ],
     "風の予測": [
-        st.Page("pages/wind_profiler.py", title="ウィンドプロファイラ", icon=":material/add_circle:"),
+        st.Page("pages/wind_profiler.py", title="風向風速観測データ", icon=":material/add_circle:"),
         st.Page("pages/windy.py", title="Windy", icon=":material/add_circle:"),
     ],
     "ライブカメラ":[
