@@ -76,3 +76,33 @@ for observation_area in observation_areas:
 m.add_child(fg_observation_area)
 
 st_folium(m, width=800, key="wind_map", returned_objects=[])
+
+
+"""
+#### [下層悪天予想図(詳細版)](https://www.data.jma.go.jp/airinfo/data/awfo_low-level_detailed-sigwx.html)
+"""
+
+(tab_nagasaki, tab_saga, tab_kumamoto, tab_kagoshima, tab_fukuoka, tab_oita, tab_miyazaki) = st.tabs(
+    ["長崎", "佐賀", "熊本", "鹿児島", "福岡", "大分", "宮崎"]
+)
+
+with tab_nagasaki:
+    st.image('https://www.data.jma.go.jp/airinfo/data/pict/low-level_sigwx_p/Lsigp_Fig803.png')
+
+with tab_saga:
+    st.image('https://www.data.jma.go.jp/airinfo/data/pict/low-level_sigwx_p/Lsigp_Fig805.png')
+
+with tab_kumamoto:
+    st.image('https://www.data.jma.go.jp/airinfo/data/pict/low-level_sigwx_p/Lsigp_Fig806.png')
+
+with tab_kagoshima:
+    st.image('https://www.data.jma.go.jp/airinfo/data/pict/low-level_sigwx_p/Lsigp_Fig808.png')
+
+with tab_fukuoka:
+    st.image('https://www.data.jma.go.jp/airinfo/data/pict/low-level_sigwx_p/Lsigp_Fig801.png')
+
+with tab_oita:
+    st.image('https://www.data.jma.go.jp/airinfo/data/pict/low-level_sigwx_p/Lsigp_Fig802.png')
+
+with tab_miyazaki:
+    st.image('https://www.data.jma.go.jp/airinfo/data/pict/low-level_sigwx_p/Lsigp_Fig807.png')

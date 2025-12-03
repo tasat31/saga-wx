@@ -13,6 +13,7 @@ st.set_page_config(
 気象庁からWeather Briefing用の資料を取得
 
 [実況資料の解説](https://www.jma.go.jp/jma/kishou/know/expert/pdf/kaisetsu_jikkyo.pdf)
+[高層天気図について](https://www.jma.go.jp/jma/kishou/know/kurashi/upper_map.html)
 
 """
 
