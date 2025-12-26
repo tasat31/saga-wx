@@ -179,7 +179,7 @@ if st.button("Refresh", key="refresh_top"):
 
 """
 
-st.write("[[ASAS] アジア太平洋域 実況天気図](https://www.data.jma.go.jp/fcd/yoho/data/wxchart/quick/ASAS_COLOR.pdf)")
+st.write("[[ASAS] アジア太平洋域 実況天気図](https://www.data.jma.go.jp/fcd/yoho/data/wxchart/quick/ASAS_COLOR.pdf) 1日4回 00、06、12、18時(UTC)")
 
 st.pdf('https://www.data.jma.go.jp/fcd/yoho/data/wxchart/quick/ASAS_COLOR.pdf', key="asas")
 

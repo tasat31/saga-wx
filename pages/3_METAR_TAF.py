@@ -14,8 +14,8 @@ st.set_page_config(
 ### METAR, TAF, 飛行場時系列データ
 
 METAR, TAFの読み方: [航空気象通報式第3版](https://www.jma.go.jp/jma/kishou/books/tsuhoshiki/koukuu/koukuu3_15.pdf)
-
 """
+
 if st.button("Refresh", key="refresh_top"):
     st.rerun()
 
@@ -39,6 +39,13 @@ if st.button("Refresh", key="refresh_bottom"):
     st.rerun()
 
 """
+TAF 1日4回 00、06、12、18時(UTC)
+
+飛行場時系列予報 1日4回 00、06、12、18時(UTC)
+
+[飛行場に関する気象情報(気象庁)](https://www.jma.go.jp/jma/kishou/know/kouku/3_yohou/31_hikoujou/31_hikoujou.html)
+
+
 出典:
     気象庁・飛行場気象解説情報（定時/臨時）: https://www.data.jma.go.jp/airinfo/data/awfo_comment.html
 """
