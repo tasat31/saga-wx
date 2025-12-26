@@ -20,7 +20,7 @@ pg = st.navigation({
         st.Page("pages/4_下層悪天予想図(西日本).py", title="下層悪天予想図(西日本)", icon=":material/add_circle:"),
         st.Page("pages/6_毎時大気解析.py", title="毎時大気解析", icon=":material/add_circle:"),
         st.Page("pages/wind_observations.py", title="風向風速観測データ", icon=":material/add_circle:"),
-        st.Page("pages/週間天気予報.py", title="週間天気予報", icon=":material/add_circle:"),
+        st.Page("pages/週間予報支援.py", title="週間予報支援(アンサンブル)", icon=":material/add_circle:"),
         st.Page("pages/1_天気予報.py", title="天気予報", icon=":material/add_circle:"),
     ],
     "風の予測": [
@@ -31,6 +31,7 @@ pg = st.navigation({
         st.Page("pages/7_ライブカメラ(空港).py", title="ライブカメラ(空港)", icon=":material/add_circle:"),
     ],
     "その他":[
+        st.Page("pages/conversion_tools.py", title="早見表・換算ツール", icon=":material/extension:"),
         st.Page("pages/8_その他.py", title="免責事項", icon=":material/extension:"),
     ],
 })
